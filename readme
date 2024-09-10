@@ -1,0 +1,42 @@
+Brain Tumor Segmentation with Attention U-Net
+
+Overview
+
+This repository contains a Convolutional Neural Network (CNN) model for brain tumor segmentation, utilizing the Attention U-Net architecture. The model has been trained and evaluated on the BraTS 2020 dataset, achieving an impressive accuracy of 98%.
+
+Dataset
+
+The BraTS 2020 dataset used for training and evaluation consists of high-resolution MRI scans with various modalities:
+- T1-weighted
+- T1-weighted post-contrast
+- T2-weighted
+- FLAIR
+
+The dataset includes:
+- Training Images: Annotated MRI scans of brain tumors.
+- Validation Images: A separate set of MRI scans used for validation.
+- Test Images: Used for evaluating the model's performance.
+
+The dataset is publicly available and can be accessed [here](https://www.med.upenn.edu/sbia/brats2020/data.html).
+
+Model
+
+Attention U-Net
+
+The model is based on the U-Net architecture, which is a popular deep learning model for biomedical image segmentation. The U-Net architecture features an encoder-decoder structure with skip connections that help preserve spatial information throughout the network. In this implementation, **Attention Gates** are integrated to enhance the standard U-Net model.
+
+Features of Attention U-Net:
+
+- Encoder-Decoder Architecture: Consists of a contracting path (encoder) that captures context and an expansive path (decoder) that enables precise localization. Skip connections between corresponding layers in the encoder and decoder preserve important features.
+- Attention Gates: Enhance the model's ability to focus on relevant regions of the input images and suppress irrelevant information, leading to improved segmentation performance.
+- Skip Connections: Direct connections between encoder and decoder layers help maintain spatial information and improve accuracy.
+
+Model Performance
+
+The Attention U-Net model has achieved a 98% accuracy on the BraTS 2020 dataset, demonstrating its effectiveness in accurately segmenting brain tumors.
+
+Acknowledgments
+
+- [BraTS 2020](https://www.med.upenn.edu/sbia/brats2020/data.html) for providing the dataset.
+- [U-Net](https://arxiv.org/abs/1505.04597) and [Attention U-Net](https://arxiv.org/abs/1804.03999) for the base architecture and enhancements.
+
